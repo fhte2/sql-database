@@ -23,6 +23,8 @@ def main(params):
 
     df = pd.read_csv(csv_name)
 
+    df.columns = df.columns.str.lower()
+
     df.head(n=0).to_sql(name=table_name, con=engine, if_exists='replace')
 
     df.to_sql(name=table_name, con=engine, if_exists='append', chunksize=100000)

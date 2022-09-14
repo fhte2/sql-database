@@ -12,11 +12,11 @@ For initial setup, run
 docker compose up
 ```
 
-To connect pgadmin4 to the database, go to http://localhost:8080. Use user name admin@admin.com and password root (defined in the docker-compose.yaml file) to log in.
+To connect pgadmin4 to the database, go to http://localhost:8080. Use user name admin@admin.com and password root (defined in the ```docker-compose.yaml``` file) to log in.
 
 Go to Servers > Create > Server to create a server connection. Fill in the following:
-- Host name/address: service name defined in the docker-compose.yaml
-- username and password: username and password defined in the docker-compose.yaml
+- Host name/address: service name defined in the ```docker-compose.yaml```
+- username and password: username and password defined in the ```docker-compose.yaml```
 
 To stop the setup, run 
 
@@ -26,7 +26,9 @@ docker compose down
 
 ### Loading data in the DB
 
-Data can be loaded in the database from .csv files, using the ingest_data_local.py script.
+#### Method 1: using a Python script
+
+Data can be loaded in the database from .csv files, using the ```ingest_data_local.py``` script.
 To load data, place the .csv file in this folder and run the script.
 
 Example:
@@ -40,3 +42,7 @@ Example:
     --table_name=test_table \
     --csv_name=test_data.csv
 ```
+
+#### Method 2: creating tables and inserting data into it using the SQL tool in pgadmin4
+
+Example SQL can be found in the ```create_table_example.sql``` file.
