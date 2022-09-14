@@ -43,6 +43,6 @@ Example:
     --csv_name=test_data.csv
 ```
 
-#### Method 2: creating tables and inserting data into it using the SQL tool in pgadmin4
+#### Method 2: creating tables and inserting data into it using the pgadmin4 UI
 
 Example SQL can be found in the ```create_table_example.sql``` file.
